@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GO SUMARKET</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .container { max-width: 600px; margin: auto; }
+        .item { display: flex; justify-content: space-between; align-items: center; margin: 5px 0; }
+        .item img { width: 50px; height: 50px; margin-right: 10px; }
+        .item input[type='checkbox'] { margin-right: 10px; }
+        .banner {
+            display: block;
+            margin: 0 auto;
+            max-width: 900%;
+            height: auto;
+        }
+        .input-container {
+            margin-top: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>GO SUMARKET</h2>
+        <img src="konten/kkn25.jpg" alt="Supermarket Banner" class="banner">
+
+    </div>
+
+    <div class="input-container">
+        <input type="text" id="itemInput" placeholder="Masukkan nama produk">
+        <input type="number" id="priceInput" placeholder="Harga">
+        <input type="file" id="imageInput" accept="image/*">
+        <button onclick="addItem()">Tambah Produk</button>
+        <ul id="itemList" style="list-style-type: none; padding: 0;"></ul>
+        <h3>Total: Rp <span id="totalPrice">0</span></h3>
+</div>
+
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", loadItems);
+        
+        function addItem() {
+            let itemInput = document.getElementById("itemInput");
+            let priceInput = document.getElementById("priceInput");
+            let imageInput = document.getElementById("imageInput");
+            let itemText = itemInput.value.trim();
+            let itemPrice = parseFloat(priceInput.value);
+            if (itemText === "" || isNaN(itemPrice) || !imageInput.files[0]) return;
+
+            let reader = new FileReader();
+            reader.onload = function (e) {
+                let items = getItems();
+                items.push({ text: itemText, price: itemPrice, image: e.target.result, purchased: false });
+                saveItems(items);
+                renderItems();
+                itemInput.value = "";
+                priceInput.value = "";
+                imageInput.value = "";
+            };
+            reader.readAsDataURL(imageInput.files[0]);
+        }
+
+        function getItems() {
+            return JSON.parse(localStorage.getItem("items")) || [];
+        }
+
+        function saveItems(items) {
+            localStorage.setItem("items", JSON.stringify(items));
+        }
+
+        function renderItems() {
+            let itemList = document.getElementById("itemList");
+            let totalPrice = document.getElementById("totalPrice");
+            itemList.innerHTML = "";
+            let items = getItems();
+            let total = 0;
+
+            items.forEach((item, index) => {
+                let li = document.createElement("li");
+                li.className = "item";
+                
+                let checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.checked = item.purchased;
+                checkbox.addEventListener("change", () => toggleItem(index));
+                
+                let img = document.createElement("img");
+                img.src = item.image;
+                img.alt = item.text;
+                
+                let textSpan = document.createElement("span");
+                textSpan.textContent = `${item.text} - Rp ${item.price}`;
+                
+                let deleteBtn = document.createElement("button");
+                deleteBtn.textContent = "Hapus";
+                deleteBtn.onclick = () => deleteItem(index);
+                
+                li.appendChild(checkbox);
+                li.appendChild(img);
+                li.appendChild(textSpan);
+                li.appendChild(deleteBtn);
+                itemList.appendChild(li);
+                total += item.purchased ? item.price : 0;
+            });
+            
+            totalPrice.textContent = total;
+        }
+
+        function toggleItem(index) {
+            let items = getItems();
+            items[index].purchased = !items[index].purchased;
+            saveItems(items);
+            renderItems();
+        }
+
+        function deleteItem(index) {
+            let items = getItems();
+            items.splice(index, 1);
+            saveItems(items);
+            renderItems();
+        }
+
+        function loadItems() {
+            renderItems();
+        }
+    </script>
+</body>
+</html>
