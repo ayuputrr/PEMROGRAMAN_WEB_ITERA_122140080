@@ -26,41 +26,32 @@
     <div class="container">
         <h2>GO SUMARKET</h2>
         <img src="konten/kkn25.jpg" alt="Supermarket Banner" class="banner">
-
     </div>
 
     <div class="input-container">
         <input type="text" id="itemInput" placeholder="Masukkan nama produk">
         <input type="number" id="priceInput" placeholder="Harga">
-        <input type="file" id="imageInput" accept="image/*">
         <button onclick="addItem()">Tambah Produk</button>
         <ul id="itemList" style="list-style-type: none; padding: 0;"></ul>
         <h3>Total: Rp <span id="totalPrice">0</span></h3>
-</div>
+    </div>
 
-    
     <script>
         document.addEventListener("DOMContentLoaded", loadItems);
         
         function addItem() {
             let itemInput = document.getElementById("itemInput");
             let priceInput = document.getElementById("priceInput");
-            let imageInput = document.getElementById("imageInput");
             let itemText = itemInput.value.trim();
             let itemPrice = parseFloat(priceInput.value);
-            if (itemText === "" || isNaN(itemPrice) || !imageInput.files[0]) return;
+            if (itemText === "" || isNaN(itemPrice)) return;
 
-            let reader = new FileReader();
-            reader.onload = function (e) {
-                let items = getItems();
-                items.push({ text: itemText, price: itemPrice, image: e.target.result, purchased: false });
-                saveItems(items);
-                renderItems();
-                itemInput.value = "";
-                priceInput.value = "";
-                imageInput.value = "";
-            };
-            reader.readAsDataURL(imageInput.files[0]);
+            let items = getItems();
+            items.push({ text: itemText, price: itemPrice, purchased: false });
+            saveItems(items);
+            renderItems();
+            itemInput.value = "";
+            priceInput.value = "";
         }
 
         function getItems() {
@@ -87,10 +78,6 @@
                 checkbox.checked = item.purchased;
                 checkbox.addEventListener("change", () => toggleItem(index));
                 
-                let img = document.createElement("img");
-                img.src = item.image;
-                img.alt = item.text;
-                
                 let textSpan = document.createElement("span");
                 textSpan.textContent = `${item.text} - Rp ${item.price}`;
                 
@@ -99,7 +86,6 @@
                 deleteBtn.onclick = () => deleteItem(index);
                 
                 li.appendChild(checkbox);
-                li.appendChild(img);
                 li.appendChild(textSpan);
                 li.appendChild(deleteBtn);
                 itemList.appendChild(li);
