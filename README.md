@@ -62,3 +62,91 @@ Semua data disimpan secara **lokal di browser** tanpa memerlukan backend, sehing
 ![Screenshot (87)](https://github.com/user-attachments/assets/08e6bbbc-63a5-4d2c-82b9-e57c7c754471)
 ![Screenshot (88)](https://github.com/user-attachments/assets/3c729faa-1a2e-400e-96c8-1f6f0b883116)
 
+# Pertemuan 3
+# Pustakaku 📚
+
+Pustakaku adalah aplikasi pengelolaan koleksi buku yang dibangun menggunakan React. Aplikasi ini memungkinkan pengguna untuk menambahkan, mengedit, dan menghapus daftar buku berdasarkan status seperti dimiliki, sedang dibaca, dan ingin dibeli.
+**Link Deploy**
+
+https://pustakaku.vercel.app/
+## Fitur Utama
+
+- Tambah, edit, dan hapus buku
+- Filter berdasarkan status (dimiliki, dibaca, ingin dibeli)
+- Pencarian buku berdasarkan judul atau penulis
+- Statistik buku
+- Penyimpanan data menggunakan Firebase Realtime Database
+- Penggunaan `localStorage` untuk pencarian dan filter
+- Testing unit menggunakan React Testing Library
+- Validasi input form
+- Menggunakan PropTypes dan React Hooks
+
+## Struktur Proyek
+
+```
+pustakaku-app/
+  pustakaku-app/
+    .gitignore
+    package-lock.json
+    package.json
+    README.md
+    node_module
+```
+
+> Hanya sebagian struktur folder yang ditampilkan di atas.
+
+## Instalasi
+
+1. Clone repositori atau ekstrak file zip:
+   ```bash
+   git clone https://github.com/nama-kamu/pustakaku.git
+   ```
+
+2. Masuk ke direktori proyek:
+   ```bash
+   cd pustakaku-app
+   ```
+
+3. Install dependensi:
+   ```bash
+   npm install
+   ```
+
+4. Jalankan aplikasi:
+   ```bash
+   npm start
+   ```
+
+5. Jalankan testing:
+   ```bash
+   npm test
+   ```
+
+## Teknologi yang Digunakan
+
+- React
+- React Router DOM
+- Firebase Realtime Database
+- TailwindCSS atau styling CSS biasa
+- React Testing Library
+- PropTypes
+  
+## 🖼️ Screenshot
+![Screenshot (149)](https://github.com/user-attachments/assets/aa5015ae-350e-4c1b-8e09-032e25fc71bc)
+![Screenshot (150)](https://github.com/user-attachments/assets/a507e41e-01c2-425c-a5aa-a6527cd34890)
+![Screenshot 2025-04-20 110421](https://github.com/user-attachments/assets/af21a78d-448a-44eb-9c6a-c6d516cfeea8)
+![Screenshot (151)](https://github.com/user-attachments/assets/df4b47df-31a0-44e6-b1df-8bab9f64c061)
+![Screenshot (152)](https://github.com/user-attachments/assets/4dbdc3dc-a6ab-4791-99f5-ca928a323b4e)
+![Screenshot (148)](https://github.com/user-attachments/assets/3214b08b-3971-40c5-87e0-42b964f05d1a)
+![Screenshot (153)](https://github.com/user-attachments/assets/3788b5c2-009d-4998-895e-d03afc7fc9f1)
+
+## Kontributor
+
+- Nama: Maulina Ayu S
+- Mata Kuliah: Praktikum Pemrograman Web
+
+---
+
+Selamat mengelola perpustakaan pribadimu! 📖✨
+
+
