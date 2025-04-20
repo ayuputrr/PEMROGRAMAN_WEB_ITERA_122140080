@@ -66,9 +66,9 @@ Semua data disimpan secara **lokal di browser** tanpa memerlukan backend, sehing
 # Pustakaku 📚
 
 Pustakaku adalah aplikasi pengelolaan koleksi buku yang dibangun menggunakan React. Aplikasi ini memungkinkan pengguna untuk menambahkan, mengedit, dan menghapus daftar buku berdasarkan status seperti dimiliki, sedang dibaca, dan ingin dibeli.
-**Link Deploy**
-
-https://pustakaku.vercel.app/
+# Link Deploy
+ https://pustakaku.vercel.app/
+ 
 ## Fitur Utama
 
 - Tambah, edit, dan hapus buku
