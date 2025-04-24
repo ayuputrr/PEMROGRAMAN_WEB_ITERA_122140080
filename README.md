@@ -144,10 +144,6 @@ pustakaku-app/
 
 
 # 📘 Prakitum Pertemuan 4
-
-# Kumpulan program Python sederhana untuk menyelesaikan berbagai permasalahan umum seperti kalkulasi BMI,
-# penghitungan nilai mahasiswa, dan perhitungan luas & keliling bangun datar.
-
 # 📁 Daftar File
 
 ## 1. bmi_no1.py
