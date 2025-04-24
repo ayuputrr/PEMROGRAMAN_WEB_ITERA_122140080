@@ -140,13 +140,54 @@ pustakaku-app/
 ![Screenshot (148)](https://github.com/user-attachments/assets/3214b08b-3971-40c5-87e0-42b964f05d1a)
 ![Screenshot (153)](https://github.com/user-attachments/assets/3788b5c2-009d-4998-895e-d03afc7fc9f1)
 
+
+
+
+# 📘 Prakitum Pertemuan 4
+
+# Kumpulan program Python sederhana untuk menyelesaikan berbagai permasalahan umum seperti kalkulasi BMI,
+# penghitungan nilai mahasiswa, dan perhitungan luas & keliling bangun datar.
+
+# 📁 Daftar File
+
+## 1. bmi_no1.py
+ Program untuk menghitung Body Mass Index (BMI) berdasarkan input berat dan tinggi badan.
+ Otomatis menyesuaikan jika tinggi dimasukkan dalam satuan cm.
+ - BMI < 18.5: Berat badan kurang
+ - 18.5 ≤ BMI < 25: Berat badan normal
+ - 25 ≤ BMI < 30: Berat badan berlebih
+ - BMI ≥ 30: Obesitas
+
+## 2. nilai_mahasiswa_no2.py
+- Menghitung dan merekap nilai akhir mahasiswa dari UTS, UAS, dan Tugas.
+- Menampilkan grade, serta mahasiswa dengan nilai tertinggi dan terendah.
+
+## 3. main_no3.py & mtk_no3.py
+### Program kalkulator bangun datar interaktif:
+ - Persegi
+ - Persegi panjang
+ - Lingkaran
+ - Konversi suhu (Celsius ke Fahrenheit dan Kelvin)
+ - Bonus: Belah ketupat, Segitiga
+
+# Struktur Penggunaan:
+Program utama: main_no3.py
+Modul fungsi matematika: mtk_no3.py
+
+# 🚀 Cara Menjalankan
+python bmi_no1.py              : Kalkulasi BMI
+python nilai_mahasiswa_no2.py  : Nilai mahasiswa
+python main_no3.py             : Kalkulator bangun datar
+
+# ✅ Requirement
+- Python 3.x
+- Tidak membutuhkan library eksternal
+
 ## Kontributor
 
 - Nama: Maulina Ayu S
 - Mata Kuliah: Praktikum Pemrograman Web
 
----
 
-Selamat mengelola perpustakaan pribadimu! 📖✨
 
 
