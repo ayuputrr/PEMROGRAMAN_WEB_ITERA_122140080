@@ -171,13 +171,13 @@ pustakaku-app/
  - Bonus: Belah ketupat, Segitiga
 
 # Struktur Penggunaan:
-Program utama: main_no3.py
-Modul fungsi matematika: mtk_no3.py
+- Program utama: main_no3.py
+- Modul fungsi matematika: mtk_no3.py
 
 # 🚀 Cara Menjalankan
-python bmi_no1.py              : Kalkulasi BMI
-python nilai_mahasiswa_no2.py  : Nilai mahasiswa
-python main_no3.py             : Kalkulator bangun datar
+- python bmi_no1.py              : Kalkulasi BMI
+- python nilai_mahasiswa_no2.py  : Nilai mahasiswa
+- python main_no3.py             : Kalkulator bangun datar
 
 # ✅ Requirement
 - Python 3.x
