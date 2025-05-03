@@ -179,6 +179,72 @@ pustakaku-app/
 - Python 3.x
 - Tidak membutuhkan library eksternal
 
+# Pertemuan Ke-5
+
+## 📚 Perpustakaan Werebook
+
+**Perpustakaan Werebook** adalah aplikasi sederhana berbasis terminal yang ditulis dalam bahasa Python untuk mengelola koleksi item perpustakaan seperti buku dan majalah. Program ini menggunakan konsep pemrograman berorientasi objek (OOP) termasuk class abstrak, inheritance, encapsulation, dan property decorator.
+
+## 🚀 Fitur Utama
+- ✅ Tambah Buku dan Majalah ke dalam koleksi
+- ✅ Tampilkan semua koleksi perpustakaan
+- ✅ Cari item berdasarkan judul atau kode
+- ✅ Navigasi menu berbasis teks yang interaktif
+
+## 🛠️ Struktur Program
+
+### 1. \`ItemPerpustakaan\` (Abstract Class)
+Menjadi dasar dari semua item perpustakaan, memiliki atribut:
+- \`_kode\` (protected)
+- \`_judul\` (protected)
+- Method abstrak \`tampilkan_info()\`
+- Property getter dan setter untuk \`judul\`
+
+### 2. \`Buku\` (Subclass dari \`ItemPerpustakaan\`)
+Mewakili item buku, menambahkan atribut private \`__penulis\` dan mengimplementasikan \`tampilkan_info()\`.
+
+### 3. \`Majalah\` (Subclass dari \`ItemPerpustakaan\`)
+Mewakili item majalah, menambahkan atribut private \`__edisi\` dan mengimplementasikan \`tampilkan_info()\`.
+
+### 4. \`Perpustakaan\`
+Kelas untuk mengelola koleksi item. Fungsionalitas:
+- Menambah item
+- Menampilkan semua koleksi
+- Mencari item berdasarkan kode atau judul
+
+### 5. \`menu()\` (Fungsi Utama)
+Menampilkan antarmuka menu CLI:
+- Tambah Buku
+- Tambah Majalah
+- Tampilkan Koleksi
+- Cari Item
+- Keluar dari program
+
+## ▶️ Cara Menjalankan Program
+
+1. Pastikan Python 3 sudah terinstal.
+2. Simpan file sebagai \`tugas_no1.py\`.
+3. Jalankan dengan perintah:
+
+```
+python tugas_no1.py
+```
+
+## 🧠 Konsep Pemrograman yang Digunakan
+
+- **Abstraction**: \`ItemPerpustakaan\` sebagai abstract class
+- **Encapsulation**: Menggunakan atribut \`protected\` dan \`private\`
+- **Inheritance**: \`Buku\` dan \`Majalah\` mewarisi \`ItemPerpustakaan\`
+- **Polymorphism**: Method \`tampilkan_info()\` diimplementasi berbeda
+- **Property Decorator**: Validasi pada setter \`judul\`
+
+## 2. Inisialisasi Git
+git init
+git add .
+git commit -m "Initial commit: Program Perpustakaan Werebook dengan README"
+echo "✅ Git initialized and committed."
+
+
 ## Kontributor
 
 - Nama: Maulina Ayu S
