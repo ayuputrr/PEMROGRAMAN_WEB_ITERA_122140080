@@ -193,26 +193,26 @@ pustakaku-app/
 
 ## 🛠️ Struktur Program
 
-### 1. \`ItemPerpustakaan\` (Abstract Class)
+### 1. ItemPerpustakaan (Abstract Class)
 Menjadi dasar dari semua item perpustakaan, memiliki atribut:
-- \`_kode\` (protected)
-- \`_judul\` (protected)
-- Method abstrak \`tampilkan_info()\`
-- Property getter dan setter untuk \`judul\`
+- ```_kode``` (protected)
+- ```_judul``` (protected)
+- Method abstrak ```tampilkan_info()```
+- Property getter dan setter untuk ```judul```
 
-### 2. \`Buku\` (Subclass dari \`ItemPerpustakaan\`)
-Mewakili item buku, menambahkan atribut private \`__penulis\` dan mengimplementasikan \`tampilkan_info()\`.
+### 2. Buku (Subclass dari ItemPerpustakaan)
+Mewakili item buku, menambahkan atribut private ```__penulis``` dan mengimplementasikan ```tampilkan_info()```.
 
-### 3. \`Majalah\` (Subclass dari \`ItemPerpustakaan\`)
-Mewakili item majalah, menambahkan atribut private \`__edisi\` dan mengimplementasikan \`tampilkan_info()\`.
+### 3. Majalah (Subclass dari ItemPerpustakaan)
+Mewakili item majalah, menambahkan atribut private ```__edisi``` dan mengimplementasikan ```tampilkan_info()```.
 
-### 4. \`Perpustakaan\`
+### 4. Perpustakaan
 Kelas untuk mengelola koleksi item. Fungsionalitas:
 - Menambah item
 - Menampilkan semua koleksi
 - Mencari item berdasarkan kode atau judul
 
-### 5. \`menu()\` (Fungsi Utama)
+### 5. menu() (Fungsi Utama)
 Menampilkan antarmuka menu CLI:
 - Tambah Buku
 - Tambah Majalah
@@ -223,7 +223,7 @@ Menampilkan antarmuka menu CLI:
 ## ▶️ Cara Menjalankan Program
 
 1. Pastikan Python 3 sudah terinstal.
-2. Simpan file sebagai \`tugas_no1.py\`.
+2. Simpan file sebagai ```tugas_no1.py```.
 3. Jalankan dengan perintah:
 
 ```
@@ -232,17 +232,13 @@ python tugas_no1.py
 
 ## 🧠 Konsep Pemrograman yang Digunakan
 
-- **Abstraction**: \`ItemPerpustakaan\` sebagai abstract class
-- **Encapsulation**: Menggunakan atribut \`protected\` dan \`private\`
-- **Inheritance**: \`Buku\` dan \`Majalah\` mewarisi \`ItemPerpustakaan\`
-- **Polymorphism**: Method \`tampilkan_info()\` diimplementasi berbeda
-- **Property Decorator**: Validasi pada setter \`judul\`
+- **Abstraction**: ```ItemPerpustakaan``` sebagai abstract class
+- **Encapsulation**: Menggunakan atribut ```protected``` dan ```private```
+- **Inheritance**: \`Buku\` dan \`Majalah\` mewarisi ```ItemPerpustakaan```
+- **Polymorphism**: Method ```tampilkan_info()``` diimplementasi berbeda
+- **Property Decorator**: Validasi pada setter ```judul```
 
-## 2. Inisialisasi Git
-git init
-git add .
-git commit -m "Initial commit: Program Perpustakaan Werebook dengan README"
-echo "✅ Git initialized and committed."
+
 
 
 ## Kontributor
